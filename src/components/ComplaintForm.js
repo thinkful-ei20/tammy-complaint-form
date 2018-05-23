@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import {reduxForm, Field, focus} from 'redux-form';
-import './ComplaintForm.css';
+//import './ComplaintForm.css';
 import Input from './Input';
 import {required, nonEmpty, email} from '../validator';
 
@@ -22,15 +22,15 @@ export class ComplaintForm extends React.Component {
           />
           <Field
             name="issueSelectorr"
-            type="selector"
+            element="select"
             label="What is your issue?"
             component={Input}
             validate={[required, nonEmpty]}
           />
           <Field
             name="details"
-            type="text"
             label="Give more details (optional)"
+            element="textarea"
             component={Input}
             validate={[required, nonEmpty]}
           />
